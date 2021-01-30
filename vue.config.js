@@ -1,6 +1,3 @@
 module.exports = {
-  transpileDependencies: ["vuetify"],
-  devServer: {
-    port: process.env.PORT || 3001,
-  },
+  transpileDependencies: ["vuetify"]
 };

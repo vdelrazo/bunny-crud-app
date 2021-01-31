@@ -2,11 +2,11 @@
   <v-app>
     <v-app-bar app dark>
       <div class="d-flex align-center mr-2">
-        bezKoder
+        @vdelrazog
       </div>
 
-      <v-btn to="/tutorials" text>
-        Tutorials
+      <v-btn to="/users" text>
+        Users
       </v-btn>
 
       <v-btn to="/add" text>

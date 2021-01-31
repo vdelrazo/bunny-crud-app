@@ -1,10 +1,16 @@
 import http from "../http-common";
-import Axios from "axios";
+import axios from "axios";
 
-class TutorialDataService {
-  async getAll() {
-    const promise = await Axios.get("https://api-rest-bunny.herokuapp.com/api/tasks");
+const usersAPI = "https://api-rest-bunny.herokuapp.com/api/users";
 
+class UsersDataService {
+  async getAllUsers() {
+    const promise = await axios.get(usersAPI);
+    return promise;
+  }
+
+  async deleteUser(id) {
+    const promise = await axios.delete(`${usersAPI}/${id}`);
     return promise;
   }
 
@@ -20,10 +26,6 @@ class TutorialDataService {
     return http.put(`/tutorials/${id}`, data);
   }
 
-  delete(id) {
-    return http.delete(`/tutorials/${id}`);
-  }
-
   deleteAll() {
     return http.delete(`/tutorials`);
   }
@@ -33,4 +35,4 @@ class TutorialDataService {
   }
 }
 
-export default new TutorialDataService();
+export default new UsersDataService();

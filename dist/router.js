@@ -6,22 +6,22 @@ export default new Router({
   mode: "history",
   routes: [{
     path: "/",
-    alias: "/tutorials",
-    name: "tutorials",
+    alias: "/users",
+    name: "users",
     component: function component() {
-      return import("./components/TutorialsList");
+      return import("./components/UsersList");
     }
   }, {
-    path: "/tutorials/:id",
-    name: "tutorial-details",
+    path: "/user/:id",
+    name: "user-details",
     component: function component() {
-      return import("./components/Tutorial");
+      return import("./components/User");
     }
   }, {
-    path: "/add",
-    name: "add",
+    path: "/addUser",
+    name: "adduser",
     component: function component() {
-      return import("./components/AddTutorial");
+      return import("./components/AddUser");
     }
   }]
 });

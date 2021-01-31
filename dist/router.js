@@ -1,4 +1,3 @@
-import "core-js/modules/es.object.to-string.js";
 import Vue from "vue";
 import Router from "vue-router";
 Vue.use(Router);

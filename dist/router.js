@@ -11,6 +11,12 @@ export default new Router({
       return import("./components/UsersList");
     }
   }, {
+    path: "/tasks",
+    name: "tasks",
+    component: function component() {
+      return import("./components/TasksList");
+    }
+  }, {
     path: "/user/:id",
     name: "user-details",
     component: function component() {

@@ -9,8 +9,8 @@
         Users
       </v-btn>
 
-      <v-btn to="/add" text>
-        Add
+      <v-btn to="/tasks" text>
+        Tasks
       </v-btn>
     </v-app-bar>
 

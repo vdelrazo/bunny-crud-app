@@ -14,6 +14,24 @@ class UsersDataService {
     return promise;
   }
 
+  async updateUser(id, data) {
+    const promise = await axios.put(`${usersAPI}/${id}`, `{"name": "${data}"}`,  {
+      headers: {
+          'Content-Type': 'application/json',
+      }
+    });
+    return promise;
+  }
+
+  async createUser(data) {
+    const promise = await axios.post(usersAPI, `{"name": "${data}"}`,  {
+      headers: {
+          'Content-Type': 'application/json',
+      }
+    });
+    return promise;
+  }
+
   get(id) {
     return http.get(`/tutorials/${id}`);
   }
@@ -22,9 +40,7 @@ class UsersDataService {
     return http.post("/tutorials", data);
   }
 
-  update(id, data) {
-    return http.put(`/tutorials/${id}`, data);
-  }
+  
 
   deleteAll() {
     return http.delete(`/tutorials`);

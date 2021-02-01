@@ -26,6 +26,26 @@ var UsersDataService = /*#__PURE__*/function () {
       return promise;
     }
   }, {
+    key: "updateUser",
+    value: async function updateUser(id, data) {
+      var promise = await axios.put("".concat(usersAPI, "/").concat(id), "{\"name\": \"".concat(data, "\"}"), {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      return promise;
+    }
+  }, {
+    key: "createUser",
+    value: async function createUser(data) {
+      var promise = await axios.post(usersAPI, "{\"name\": \"".concat(data, "\"}"), {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      return promise;
+    }
+  }, {
     key: "get",
     value: function get(id) {
       return http.get("/tutorials/".concat(id));
@@ -34,11 +54,6 @@ var UsersDataService = /*#__PURE__*/function () {
     key: "create",
     value: function create(data) {
       return http.post("/tutorials", data);
-    }
-  }, {
-    key: "update",
-    value: function update(id, data) {
-      return http.put("/tutorials/".concat(id), data);
     }
   }, {
     key: "deleteAll",

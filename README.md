@@ -1,4 +1,14 @@
 # Bunny CRUD app
-![alt text](https://github.com/vdelrazo/bunny-crud-app/blob/master/ArchitectureBlockDiagram.png?raw=true)
+This app allows to create users and assign them tasks. Information is stored inside a Mongo Atlas DB therough API REST requests.
 
-files/Architecture Block Diagram.png
+## Applicacion running URL
+https://app-bunny.herokuapp.com/
+
+## Architecture Diagram
+![alt text](files/ArchitectureBlockDiagram.png)
+
+## Notes
+
+* The database contain somre records to make the tests easier.
+* Users can be refreshed using the browser reload button. 
+* Tasks can be refreshed using the broswer and the UI button.

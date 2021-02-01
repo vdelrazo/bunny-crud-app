@@ -16,17 +16,5 @@ export default new Router({
     component: function component() {
       return import("./components/TasksList");
     }
-  }, {
-    path: "/user/:id",
-    name: "user-details",
-    component: function component() {
-      return import("./components/User");
-    }
-  }, {
-    path: "/addUser",
-    name: "adduser",
-    component: function component() {
-      return import("./components/AddUser");
-    }
   }]
 });
